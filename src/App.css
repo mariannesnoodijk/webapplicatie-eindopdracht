@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+:root {
+    --main-color-light: #F5F5F5;
+    --main-color-white: #FFFFFF;
+    --main-color-medium: #D5CCBB;
+    --main-color-dark: #2E2E2E;
+}
+
+body {
+    background-color: var(--main-color-light);
+}
