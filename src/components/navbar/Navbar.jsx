@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from "react";
 import './Navbar.css';
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import logo from '../../assets/logo/logo.png'
 import ReorderIcon from '@mui/icons-material/Reorder';
 import CloseIcon from '@mui/icons-material/Close';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import {Button} from "../../helpers/button/Button.jsx";
 
 function Navbar() {
@@ -55,8 +53,8 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/listings' className='nav-links' onClick={closeMobileMenu}>
-                                Listings
+                            <Link to='/properties' className='nav-links' onClick={closeMobileMenu}>
+                                Properties
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -69,9 +67,17 @@ function Navbar() {
                                 Login
                             </Link>
                         </li>
+                        {/* TODO: FIND OUT BELOW. WHEN ACTIVE, DOESNT FIT/APPEAR ON PAGE. ONLY APPEARS IN SMALL SCREEN*/}
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to='/registerAccount' className='nav-links-mobile' onClick={closeMobileMenu}>*/}
+                        {/*        Register*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>LOGIN<AccountCircleOutlinedIcon/></Button>}
-                    {button && <Button buttonStyle='btn--outline'>FAVORITES<FavoriteBorderOutlinedIcon/></Button>}
+                    <Link to='/login'>{button && <Button buttonStyle='btn--outline'>LOGIN</Button>}</Link>
+                    <Link to='/register'>{button && <Button buttonStyle='btn--outline'>REGISTER</Button>}</Link>
+
+                    {/*{button && <Button buttonStyle='btn--outline'>FAVORITES</Button>}*/}
                 </div>
             </nav>
         </>
